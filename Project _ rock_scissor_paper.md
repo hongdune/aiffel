@@ -17,7 +17,11 @@ import numpy as np
 
 def load_data(img_path):
     # 가위 : 0, 바위 : 1, 보 : 2
+<<<<<<< HEAD
     number_of_data=2165   # 가위바위보 이미지 개수 총합에 주의하세요.
+=======
+    number_of_data=300   # 가위바위보 이미지 개수 총합에 주의하세요.
+>>>>>>> f9d12b0457252812acebde8e0efb9390d97ad7ca
     img_size=28
     color=3
     #이미지 데이터와 라벨(가위 : 0, 바위 : 1, 보 : 2) 데이터를 담을 행렬(matrix) 영역을 생성합니다.
@@ -54,9 +58,15 @@ print("x_train shape: {}".format(x_train.shape))
 print("y_train shape: {}".format(y_train.shape))
 ```
 
+<<<<<<< HEAD
     학습데이터(x_train)의 이미지 개수는 2165 입니다.
     x_train shape: (2165, 28, 28, 3)
     y_train shape: (2165,)
+=======
+    학습데이터(x_train)의 이미지 개수는 300 입니다.
+    x_train shape: (300, 28, 28, 3)
+    y_train shape: (300,)
+>>>>>>> f9d12b0457252812acebde8e0efb9390d97ad7ca
 
 
 
@@ -111,6 +121,7 @@ model.compile(optimizer='adam',
              loss='sparse_categorical_crossentropy',
              metrics=['accuracy'])
 
+<<<<<<< HEAD
 model.fit(x_train, y_train, epochs=15)
 ```
 
@@ -144,12 +155,41 @@ model.fit(x_train, y_train, epochs=15)
     68/68 [==============================] - 0s 1ms/step - loss: 1.8438e-04 - accuracy: 1.0000
     Epoch 15/15
     68/68 [==============================] - 0s 1ms/step - loss: 1.6326e-04 - accuracy: 1.0000
+=======
+model.fit(x_train, y_train, epochs=10)
+```
+
+    Epoch 1/10
+    10/10 [==============================] - 0s 2ms/step - loss: 3.3205 - accuracy: 0.5000
+    Epoch 2/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.8689 - accuracy: 0.6533
+    Epoch 3/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.4067 - accuracy: 0.8067
+    Epoch 4/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.2099 - accuracy: 0.9233
+    Epoch 5/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.1369 - accuracy: 0.9433
+    Epoch 6/10
+    10/10 [==============================] - 0s 1ms/step - loss: 0.0998 - accuracy: 0.9667
+    Epoch 7/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.0686 - accuracy: 0.9800
+    Epoch 8/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.0622 - accuracy: 0.9800
+    Epoch 9/10
+    10/10 [==============================] - 0s 1ms/step - loss: 0.0352 - accuracy: 1.0000
+    Epoch 10/10
+    10/10 [==============================] - 0s 2ms/step - loss: 0.0199 - accuracy: 1.0000
+>>>>>>> f9d12b0457252812acebde8e0efb9390d97ad7ca
 
 
 
 
 
+<<<<<<< HEAD
     <tensorflow.python.keras.callbacks.History at 0x7fb70d0496d0>
+=======
+    <tensorflow.python.keras.callbacks.History at 0x7ff978037450>
+>>>>>>> f9d12b0457252812acebde8e0efb9390d97ad7ca
 
 
 
@@ -206,9 +246,15 @@ print("test_loss: {} ".format(test_loss))
 print("test_accuracy: {}".format(test_accuracy))
 ```
 
+<<<<<<< HEAD
     10/10 - 0s - loss: 4.8110 - accuracy: 0.6233
     test_loss: 4.810976028442383 
     test_accuracy: 0.6233333349227905
+=======
+    10/10 - 0s - loss: 0.3421 - accuracy: 0.8233
+    test_loss: 0.3421267569065094 
+    test_accuracy: 0.8233333230018616
+>>>>>>> f9d12b0457252812acebde8e0efb9390d97ad7ca
 
 
 
