@@ -167,7 +167,11 @@ plt.show()
 ![png](bike3.png)
 
 
-'year', 'minute', 'second'의 경우 모든 항목이 동일값을 가지거나 큰 의미가 없었으며 'casual'을 예측하는 경우 mse값과 rmse값이 각각 1418과 37로, 'registered'를 예측하는 경우 각각 16193과 127이 나와 'casual'의 경우 날씨, 시간 등 변수에 의해 훨씬 많은 영향을, 반대로 'registered'의 경우 변화에 영향을 덜 받는 다는 것을 확인하였다.
+
+row_data의 'datetime'의 초기값 타입은 pandas.dataframe이었기에 이를 datetime타입으로 변경하였다. 주어진 데이터는 to_datetime에 내장된 함수를 통해 바로 타입을 전환할 수 있었지만 각각을 지정할 경우 %Y-%m-%d등 순서와 명령어를 준수하지 않으면 에러가 발생한다.
+X_test의 각 항목의 값은 벡터값이기 때문에 X_test[7]을 호출할 경우 7번째 벡터가 호출되며 해당 벡터 내의 8번째 항목들만 부르고 싶다면 X_test[:,7]이란 명령어를 사용하여야한다.
+
+'year', 'minute', 'second'의 경우 모든 항목이 동일값을 가지거나 큰 의미가 없었으며 'casual'을 예측하는 경우 mse값과 rmse값이 각각 1418과 37로, 'registered'를 예측하는 경우 각각 16193과 127이 나와 'casual'의 경우 날씨, 시간 등 변수에 의해 훨씬 많은 영향을, 반대로 'registered'의 경우 변화에 영향을 덜 받는다. 즉, 주어진 데이터를 통해 'count'를 예측하는 것보다는 'casual'을 예측하는 것이 더 정확하다. 아래는 각각 temp와 humidity에 따'casual'을 예측하였을때 그래프이다.
 
 
 ![png](temp.png)
