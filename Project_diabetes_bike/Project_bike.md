@@ -168,5 +168,7 @@ plt.show()
 
 
 'year', 'minute', 'second'의 경우 모든 항목이 동일값을 가지거나 큰 의미가 없었으며 'casual'을 예측하는 경우 mse값과 rmse값이 각각 1418과 37로, 'registered'를 예측하는 경우 각각 16193과 127이 나와 'casual'의 경우 날씨, 시간 등 변수에 의해 훨씬 많은 영향을, 반대로 'registered'의 경우 변화에 영향을 덜 받는 다는 것을 확인하였다.
+
+
 ![png](temp.png)
 ![png](humidity.png)
